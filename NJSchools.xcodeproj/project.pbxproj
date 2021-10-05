@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		D8B1C476270BBC5600036B35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1C475270BBC5600036B35 /* AppDelegate.swift */; };
 		D8B1C478270BBC5600036B35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1C477270BBC5600036B35 /* SceneDelegate.swift */; };
-		D8B1C47A270BBC5600036B35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1C479270BBC5600036B35 /* ViewController.swift */; };
 		D8B1C47D270BBC5600036B35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B1C47B270BBC5600036B35 /* Main.storyboard */; };
 		D8B1C47F270BBC5600036B35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B1C47E270BBC5600036B35 /* Assets.xcassets */; };
 		D8B1C482270BBC5600036B35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B1C480270BBC5600036B35 /* LaunchScreen.storyboard */; };
 		D8B1C48D270BBC5600036B35 /* NJSchoolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1C48C270BBC5600036B35 /* NJSchoolsTests.swift */; };
 		D8B1C497270BBC5600036B35 /* NJSchoolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1C496270BBC5600036B35 /* NJSchoolsUITests.swift */; };
 		D8B1C499270BBC5600036B35 /* NJSchoolsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1C498270BBC5600036B35 /* NJSchoolsUITestsLaunchTests.swift */; };
+		D8B1C4A7270BBD4F00036B35 /* NJSchools.json in Resources */ = {isa = PBXBuildFile; fileRef = D8B1C4A6270BBD4F00036B35 /* NJSchools.json */; };
+		D8B1C4A9270BBEB500036B35 /* SchoolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1C4A8270BBEB500036B35 /* SchoolTableViewController.swift */; };
+		D8B1C4AB270BBF4B00036B35 /* NJSchoolsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1C4AA270BBF4B00036B35 /* NJSchoolsModel.swift */; };
+		D8B1C4AD270BCE8000036B35 /* CustomSchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1C4AC270BCE8000036B35 /* CustomSchoolTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,6 @@
 		D8B1C472270BBC5600036B35 /* NJSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJSchools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B1C475270BBC5600036B35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8B1C477270BBC5600036B35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8B1C479270BBC5600036B35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8B1C47C270BBC5600036B35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8B1C47E270BBC5600036B35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8B1C481270BBC5600036B35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		D8B1C492270BBC5600036B35 /* NJSchoolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NJSchoolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B1C496270BBC5600036B35 /* NJSchoolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJSchoolsUITests.swift; sourceTree = "<group>"; };
 		D8B1C498270BBC5600036B35 /* NJSchoolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJSchoolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D8B1C4A6270BBD4F00036B35 /* NJSchools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = NJSchools.json; path = ../../../NJSchools.json; sourceTree = "<group>"; };
+		D8B1C4A8270BBEB500036B35 /* SchoolTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewController.swift; sourceTree = "<group>"; };
+		D8B1C4AA270BBF4B00036B35 /* NJSchoolsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJSchoolsModel.swift; sourceTree = "<group>"; };
+		D8B1C4AC270BCE8000036B35 /* CustomSchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSchoolTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,12 @@
 		D8B1C474270BBC5600036B35 /* NJSchools */ = {
 			isa = PBXGroup;
 			children = (
-				D8B1C475270BBC5600036B35 /* AppDelegate.swift */,
-				D8B1C477270BBC5600036B35 /* SceneDelegate.swift */,
-				D8B1C479270BBC5600036B35 /* ViewController.swift */,
+				D8B1C4A5270BBC9100036B35 /* App Files */,
 				D8B1C47B270BBC5600036B35 /* Main.storyboard */,
+				D8B1C4AC270BCE8000036B35 /* CustomSchoolTableViewCell.swift */,
+				D8B1C4A8270BBEB500036B35 /* SchoolTableViewController.swift */,
+				D8B1C4AA270BBF4B00036B35 /* NJSchoolsModel.swift */,
+				D8B1C4A6270BBD4F00036B35 /* NJSchools.json */,
 				D8B1C47E270BBC5600036B35 /* Assets.xcassets */,
 				D8B1C480270BBC5600036B35 /* LaunchScreen.storyboard */,
 				D8B1C483270BBC5600036B35 /* Info.plist */,
@@ -125,6 +133,15 @@
 				D8B1C498270BBC5600036B35 /* NJSchoolsUITestsLaunchTests.swift */,
 			);
 			path = NJSchoolsUITests;
+			sourceTree = "<group>";
+		};
+		D8B1C4A5270BBC9100036B35 /* App Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8B1C475270BBC5600036B35 /* AppDelegate.swift */,
+				D8B1C477270BBC5600036B35 /* SceneDelegate.swift */,
+			);
+			path = "App Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8B1C482270BBC5600036B35 /* LaunchScreen.storyboard in Resources */,
+				D8B1C4A7270BBD4F00036B35 /* NJSchools.json in Resources */,
 				D8B1C47F270BBC5600036B35 /* Assets.xcassets in Resources */,
 				D8B1C47D270BBC5600036B35 /* Main.storyboard in Resources */,
 			);
@@ -258,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8B1C47A270BBC5600036B35 /* ViewController.swift in Sources */,
+				D8B1C4A9270BBEB500036B35 /* SchoolTableViewController.swift in Sources */,
 				D8B1C476270BBC5600036B35 /* AppDelegate.swift in Sources */,
 				D8B1C478270BBC5600036B35 /* SceneDelegate.swift in Sources */,
+				D8B1C4AD270BCE8000036B35 /* CustomSchoolTableViewCell.swift in Sources */,
+				D8B1C4AB270BBF4B00036B35 /* NJSchoolsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
