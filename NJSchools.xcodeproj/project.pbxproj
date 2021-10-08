@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D82AA82F271076F600A2608D /* SchoolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82AA82E271076F600A2608D /* SchoolDetailViewController.swift */; };
 		D8B1C476270BBC5600036B35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1C475270BBC5600036B35 /* AppDelegate.swift */; };
 		D8B1C478270BBC5600036B35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1C477270BBC5600036B35 /* SceneDelegate.swift */; };
 		D8B1C47D270BBC5600036B35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B1C47B270BBC5600036B35 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D82AA82E271076F600A2608D /* SchoolDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewController.swift; sourceTree = "<group>"; };
 		D8B1C472270BBC5600036B35 /* NJSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NJSchools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B1C475270BBC5600036B35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8B1C477270BBC5600036B35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				D8B1C47B270BBC5600036B35 /* Main.storyboard */,
 				D8B1C4AC270BCE8000036B35 /* CustomSchoolTableViewCell.swift */,
 				D8B1C4A8270BBEB500036B35 /* SchoolTableViewController.swift */,
+				D82AA82E271076F600A2608D /* SchoolDetailViewController.swift */,
 				D8B1C4AA270BBF4B00036B35 /* NJSchoolsModel.swift */,
 				D8B1C4A6270BBD4F00036B35 /* NJSchools.json */,
 				D8B1C47E270BBC5600036B35 /* Assets.xcassets */,
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82AA82F271076F600A2608D /* SchoolDetailViewController.swift in Sources */,
 				D8B1C4A9270BBEB500036B35 /* SchoolTableViewController.swift in Sources */,
 				D8B1C476270BBC5600036B35 /* AppDelegate.swift in Sources */,
 				D8B1C478270BBC5600036B35 /* SceneDelegate.swift in Sources */,

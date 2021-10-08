@@ -12,10 +12,9 @@ class CustomSchoolTableViewCell: UITableViewCell {
     @IBOutlet weak var schoolRating: UILabel!
     @IBOutlet weak var schoolPhone: UILabel!
     @IBOutlet weak var schoolName: UILabel!
-    @IBOutlet weak var schoolTypeImage: UIImageView!
+    @IBOutlet weak var sourceImage: UIImageView!
     
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -27,7 +27,7 @@ struct Properties: Codable {
     var ratings: Int = 0
     var phone: String?
     var address: String?
-    //add the properties that arent here
+
     
     enum CodingKeys: String, CodingKey {
         case objectId = "OBJECTID"
@@ -36,7 +36,6 @@ struct Properties: Codable {
         case name = "SCHOOLNAME"
         case phone = "PHONE"
         case address = "ADDRESS1"
-        //add in the coding keys
     }
 }
 
@@ -100,6 +99,24 @@ class NJSchoolsModel {
         for county in counties {
             njCountiesNschools[county] = njSchools.filter({($0.properties.county).caseInsensitiveCompare(county) == .orderedSame})
         }
+    }
+    
+    func getSchoolInfo(forSchoolId id: Int, inCounty county: String) -> School? {
+        if let index = (njCountiesNschools[county])?.firstIndex(where: {$0.properties.objectId == id}) {
+            return njCountiesNschools[county]?[index]
+        }
+        return nil;
+    }
+    
+    func updateSchoolsRating(forSchoolId id: Int, county: String, rating newRating: Int?) -> Bool {
+        print(id)
+        print(county)
+        //print(newRating)
+        if let index = (njCountiesNschools[county])?.firstIndex(where: {$0.properties.objectId == id}) {
+            njCountiesNschools[county]?[index].properties.ratings = newRating ?? 0
+            return true
+        }
+        return false
     }
     
     func updateSchoolRating (_ index: Int, rating new: Int) {
