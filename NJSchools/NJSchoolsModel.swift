@@ -24,7 +24,7 @@ struct Properties: Codable {
     var schoolType: String?
     var county: String
     var name: String
-    var ratings: Int = 0
+    var rating: Int = 0
     var phone: String?
     var address: String?
 
@@ -113,14 +113,14 @@ class NJSchoolsModel {
         print(county)
         //print(newRating)
         if let index = (njCountiesNschools[county])?.firstIndex(where: {$0.properties.objectId == id}) {
-            njCountiesNschools[county]?[index].properties.ratings = newRating ?? 0
+            njCountiesNschools[county]?[index].properties.rating = newRating ?? 0
             return true
         }
         return false
     }
     
     func updateSchoolRating (_ index: Int, rating new: Int) {
-        self.njSchools[index].properties.ratings = new
+        self.njSchools[index].properties.rating = new
         
     }
     

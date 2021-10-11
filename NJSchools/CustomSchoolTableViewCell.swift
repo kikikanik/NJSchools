@@ -9,6 +9,7 @@ import UIKit
 
 class CustomSchoolTableViewCell: UITableViewCell {
 
+
     @IBOutlet weak var schoolRating: UILabel!
     @IBOutlet weak var schoolPhone: UILabel!
     @IBOutlet weak var schoolName: UILabel!

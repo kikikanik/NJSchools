@@ -11,7 +11,6 @@ class SchoolDetailViewController: UIViewController, UITableViewDataSource, UITab
 
 
     @IBOutlet weak var schoolList: UITableView!
-
     @IBOutlet weak var ratingsStars: UITextField!
     @IBOutlet weak var ratingsSlider: UISlider!
     
@@ -42,7 +41,7 @@ class SchoolDetailViewController: UIViewController, UITableViewDataSource, UITab
         
         // enable slider
         ratingsSlider.isEnabled = true
-        initRatingsSlider(editedSchool!.properties.ratings)
+        initRatingsSlider(editedSchool!.properties.rating)
         
         self.title = editedSchool?.properties.name
     }
@@ -70,7 +69,7 @@ class SchoolDetailViewController: UIViewController, UITableViewDataSource, UITab
             cell.detailTextLabel?.text = editedSchool?.properties.phone
         case 3:
             cell.textLabel?.text = "Rating: "
-            cell.detailTextLabel?.text = getStars(editedSchool?.properties.ratings ?? 0)
+            cell.detailTextLabel?.text = getStars(editedSchool?.properties.rating ?? 0)
         default:
             cell.textLabel?.text = "?"
             cell.detailTextLabel?.text = "?"
@@ -79,13 +78,18 @@ class SchoolDetailViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
+    // ***** this method is not needed as we are just showing values
+    /*
     // selected section and row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndexPath = indexPath
         ratingsSlider.isEnabled = true      // already set to true in viewDidLoad()
-        let schoolRating = njSchoolsModel.njSchools[indexPath.row].properties.ratings
+        let schoolRating = njSchoolsModel.njSchools[indexPath.row].properties.rating
         initRatingsSlider(schoolRating)
     }
+
+     */
+    
     
     // set the slider position
     func initRatingsSlider(_ rating: Int) {
@@ -98,6 +102,7 @@ class SchoolDetailViewController: UIViewController, UITableViewDataSource, UITab
     @IBAction func setRatings(_ sender: UISlider) {
         print(ratingsSlider.value)
         sender.setValue(Float(lroundf(ratingsSlider.value)), animated: true)
+        
         showRatings(Int(ratingsSlider.value))
         updateSchoolRating(Int(ratingsSlider.value))
     }
@@ -120,18 +125,19 @@ class SchoolDetailViewController: UIViewController, UITableViewDataSource, UITab
         ratingsStars.text = s
     }
     
-    // update the UI for the selected row
-    // invoke the model for rating info
-    func updateSchoolRating(_ newRating: Int) {
-        if let indexPath = selectedIndexPath {
-            njSchoolsModel.updateSchoolRating(indexPath.row, rating: newRating)
-            self.schoolList.reloadRows(at: [indexPath], with: .automatic)
-            self.schoolList.selectRow(at: indexPath, animated: true, scrollPosition: .none)
-        }
-    }
+    // This method now has to work with updated the local editedSchool object and reload the table
+     
+     // update the UI for the selected row
+     // invoke the model for rating info
+     func updateSchoolRating(_ newRating: Int) {
+         editedSchool!.properties.rating = newRating
+         self.schoolList.reloadData()
+     }
+     
+    
     
     // action for Barbutton Save - update the model
-    @IBAction func save(_ sender: UIBarButtonItem) {
+    @IBAction func save(_ sender: Any) {
         // get the rating
         enteredRating = Int(ratingsSlider.value)
         

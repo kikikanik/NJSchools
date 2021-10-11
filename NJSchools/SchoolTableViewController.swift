@@ -24,9 +24,6 @@ class SchoolTableViewController: UITableViewController {
         
         njCounties = Array(njSchoolsModel.njCountiesNschools.keys).sorted() //sorts the counties
         
-        //tableView.estimatedRowHeight = 60
-       // tableView.rowHeight = UITableView.automaticDimension
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,8 +77,9 @@ class SchoolTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         
         let county = njCounties[section]
-        return "Total: \(String(njSchoolsModel.njCountiesNschools[county]!.count))" //returns how many schools in that county
-
+        let totalCounties = njSchoolsModel.njCountiesNschools[county]?.count ?? 0
+        return "Total: \(totalCounties)" //returns how many schools in that county
+        //String(njSchoolsModel.njCountiesNschools[county]!.count)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,13 +95,7 @@ class SchoolTableViewController: UITableViewController {
         cell.schoolName.text = school.properties.name
         cell.schoolPhone.text = "Phone: " + school.properties.phone!
         
-        cell.schoolRating.text = "Rating: " + getStars(school.properties.ratings)
-
-/*
-        let ratingsCount = njSchoolsModel.njCountiesNschools[county]?[indexPath.row].properties.ratings ?? 0
-        let ratingStars = String(repeating: "⭐️", count: ratingsCount)
-        cell.schoolRating.text = ratingStars
-*/
+        cell.schoolRating.text = "Rating: " + getStars(school.properties.rating)
             
         // image view
         switch (school.properties.schoolType) {
